@@ -52,8 +52,9 @@ Options:
   -a  Basic authentication, username:password.
   -x  HTTP Proxy address as host:port.
   -h2 Enable HTTP/2.
+  -v  Dumps request and response.
 
-  -host	HTTP Host header.
+  -host  HTTP Host header.
 
   -disable-compression  Disable compression.
   -disable-keepalive    Disable keep-alive, prevents re-use of TCP

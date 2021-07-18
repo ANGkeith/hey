@@ -40,6 +40,7 @@ const (
 
 var (
 	m           = flag.String("m", "GET", "")
+	v           = flag.Bool("v", false, "")
 	headers     = flag.String("h", "", "")
 	body        = flag.String("d", "", "")
 	bodyFile    = flag.String("D", "", "")
@@ -92,8 +93,9 @@ Options:
   -a  Basic authentication, username:password.
   -x  HTTP Proxy address as host:port.
   -h2 Enable HTTP/2.
+  -v  Dumps request and response.
 
-  -host	HTTP Host header.
+  -host  HTTP Host header.
 
   -disable-compression  Disable compression.
   -disable-keepalive    Disable keep-alive, prevents re-use of TCP
@@ -234,6 +236,7 @@ func main() {
 		H2:                 *h2,
 		ProxyAddr:          proxyURL,
 		Output:             *output,
+		Verbose:            *v,
 	}
 	w.Init()
 
