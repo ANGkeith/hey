@@ -12,8 +12,8 @@ The project is rewritten with the the aim of being a drop-in replacement for
 with `hey` for load testing.
 
 ## Installation
-### Pre-compiled executables [To be added]
-Get be found in the [release page](http://github.com/ANGkeith/hey/releases).
+### Pre-compiled binaries
+It can be found in the [release page](http://github.com/ANGkeith/hey/releases).
 
 ### Source
 You need `go` installed and `GOBIN` in your `PATH`. Once that is done, run the
