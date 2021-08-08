@@ -1,4 +1,9 @@
+<!-- TODO: add workflow badge -->
+[![Release](https://img.shields.io/github/release/ANGkeith/hey.svg)](https://github.com/ANGkeith/hey/releases/latest)
 [![codecov](https://codecov.io/gh/ANGkeith/hey/branch/master/graph/badge.svg?token=060YSNII8G)](https://codecov.io/gh/ANGkeith/hey)
+[![Go Report Card](https://goreportcard.com/badge/github.com/angkeith/hey)](https://goreportcard.com/report/github.com/angkeith/hey)
+[![Go Reference](https://pkg.go.dev/badge/github.com/ANGkeith/hey.svg)](https://pkg.go.dev/github.com/ANGkeith/hey)
+
 ## Description
 This is a fork from the [rakyll/hey](https://github.com/rakyll/hey).
 
