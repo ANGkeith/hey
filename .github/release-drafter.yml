@@ -41,3 +41,6 @@ autolabeler:
   - label: 'enhancement'
     branch:
       - '/feat\/.+/'
+  - label: 'alpha'
+    branch:
+      - '*'

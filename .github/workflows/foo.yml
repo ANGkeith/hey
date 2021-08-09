@@ -1,6 +1,8 @@
 on:
-  pull_request:
-    types: [closed]
+  push:
+    # branches to consider in the event; optional, defaults to all
+    branches:
+      - master
 
 jobs:
   update_release_draft:
