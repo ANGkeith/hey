@@ -29,3 +29,15 @@ template: |
   ## Changes
 
   $CHANGES
+
+autolabeler:
+  - label: 'chore'
+    branch:
+      - '/chore\/.+/'
+      - '/refactor\/.+/'
+  - label: 'bug'
+    branch:
+      - '/fix\/.+/'
+  - label: 'enhancement'
+    branch:
+      - '/feat\/.+/'

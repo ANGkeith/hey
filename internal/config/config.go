@@ -37,7 +37,9 @@ const (
 	Method             = ""
 	UserAgent          = "hey"
 	Verbose            = false
-	Version            = "v0.1.5"
+
+	// [bump]
+	Version = "v0.1.5"
 )
 
 var (

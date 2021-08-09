@@ -1,0 +1,14 @@
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  update_release_draft:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Bump versions
+      uses: remorses/bump-version@js
+      with:
+        version_file: ./internal/config/config.go
+        prerelease_tag: alpha
+        github_token: ${{ secrets.GITHUB_TOKEN }}
