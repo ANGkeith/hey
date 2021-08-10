@@ -38,6 +38,7 @@ autolabeler:
     branch:
       - '/chore\/.+/'
       - '/refactor\/.+/'
+      - '/ci\/.+/'
   - label: 'bug'
     branch:
       - '/fix\/.+/'
