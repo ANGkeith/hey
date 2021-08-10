@@ -1,4 +1,4 @@
-name-template: 'v$RESOLVED_VERSION 🌈'
+name-template: 'hey v$RESOLVED_VERSION 🌈'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: '🚀 Features'
@@ -29,3 +29,18 @@ template: |
   ## Changes
 
   $CHANGES
+
+autolabeler:
+  - label: 'alpha'
+    branch:
+      - '/.+/'
+  - label: 'chore'
+    branch:
+      - '/chore\/.+/'
+      - '/refactor\/.+/'
+  - label: 'bug'
+    branch:
+      - '/fix\/.+/'
+  - label: 'enhancement'
+    branch:
+      - '/feat\/.+/'
