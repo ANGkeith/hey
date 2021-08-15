@@ -15,6 +15,7 @@
 package config
 
 import (
+	"io/ioutil"
 	"runtime"
 	"time"
 )
@@ -37,12 +38,12 @@ const (
 	Method             = ""
 	UserAgent          = "hey"
 	Verbose            = false
-	Version            = "v0.1.5"
 )
 
 var (
 	Cpus        = runtime.GOMAXPROCS(-1)
 	HeaderSlice = []string{}
+	Version     = getVersion()
 )
 
 type Config struct {
@@ -98,4 +99,12 @@ func NewConfigV(url string) Config {
 		DisableRedirects:   DisableRedirects,
 		ProxyAddr:          Proxy,
 	}
+}
+
+func getVersion() string {
+	v, e := ioutil.ReadFile("VERSION")
+	if e != nil {
+		panic(e)
+	}
+	return string(v)
 }
