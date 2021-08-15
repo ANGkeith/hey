@@ -15,9 +15,12 @@
 package config
 
 import (
-	"io/ioutil"
+	"io"
 	"runtime"
+	"strings"
 	"time"
+
+	"github.com/markbates/pkger"
 )
 
 const (
@@ -102,9 +105,15 @@ func NewConfigV(url string) Config {
 }
 
 func getVersion() string {
-	v, e := ioutil.ReadFile("VERSION")
+	r, e := pkger.Open("/VERSION")
 	if e != nil {
 		panic(e)
 	}
-	return string(v)
+
+	buf := new(strings.Builder)
+	_, e = io.Copy(buf, r)
+	if e != nil {
+		panic(e)
+	}
+	return buf.String()
 }
