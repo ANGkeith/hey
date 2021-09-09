@@ -11,10 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Version bump
-        uses: remorses/bump-version@js
+        uses: angkeith/bump-version@js
         with:
             version_file: ./VERSION
             github_token: ${{ secrets.GITHUB_TOKEN }}
             prerelease_tag: alpha
+            tag_version_bump_commit: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
